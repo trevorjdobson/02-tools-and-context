@@ -4,8 +4,7 @@ const Functional = {};
 
 Functional.myForEach = (arr, cb) => {
     for(let i = 0; i < arr.length; i++) {
-        let el = arr[i];
-        cb(el)
+        arr[i] = cb(arr[i]);
     }
 };
 

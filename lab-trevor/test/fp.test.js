@@ -11,12 +11,12 @@ const functional = require('../lib/fp.js').Functional
 
 describe("testing functions", () => {
     describe("testing the for each function", () => {
-        const arr = [1, 2, 3,];
+        let arr = [1, 2, 3,];
         it("it should double each element in the arr", () => {
             let expected = [2, 4, 6];
             const double = (n) => {return n * 2};
-            let result = functional.myMap(arr, double);
-            expect(result).toEqual(expected);
+            let result = functional.myForEach(arr, double);
+            expect(arr).toEqual(expected);
         })
     })
     describe("testing the map function", () => {
