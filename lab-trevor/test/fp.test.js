@@ -15,7 +15,7 @@ describe("testing functions", () => {
         it("it should double each element in the arr", () => {
             let expected = [2, 4, 6];
             const double = (n) => {return n * 2};
-            let result = functional.myForEach(arr, double);
+            functional.myForEach(arr, double);
             expect(arr).toEqual(expected);
         })
     })
