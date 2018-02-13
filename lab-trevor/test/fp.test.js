@@ -40,8 +40,12 @@ describe("testing functions", () => {
     describe("testing the reduce function", () => {
         const arr = [2, 5, 8, 15]
         it("should return array that summed the values of original arr", () => {
-            let expected = [30];
-            let result = functional.myReduce(arr, (x, y) => {x + y});
+            let expected = 30;
+            const total = (x, y) => {return x + y}
+            let result = functional.myReduce(arr, total);
+            console.log(arr)
+            
+            expect(result).toEqual(expected);
         })
     })
 })
